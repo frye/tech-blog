@@ -1,7 +1,7 @@
 {
-	"name": "sproutspy",
+	"name": "tech-blog",
 	"version": "1.0.0",
-	"description": "Awesome gardening app",
+	"description": "Basic blog app",
 	"main": "server.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +10,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/got-git-group/SproutSpy.git"
+		"url": "https://github.com/frye/tech-blog"
 	},
 	"keywords": [
 		"awesome"
@@ -18,9 +18,9 @@
 	"author": "",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/got-git-group/SproutSpy/issues"
+		"url": "https://github.com/frye/tech-blog/issues"
 	},
-	"homepage": "https://github.com/got-git-group/SproutSpy#readme",
+	"homepage": "https://github.com/frye/tech-blog/blob/main/README.md",
 	"dependencies": {
 		"bcrypt": "^5.0.1",
 		"connect-session-sequelize": "^7.1.2",
