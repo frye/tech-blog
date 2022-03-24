@@ -17,7 +17,12 @@ router.post('/', withAuth, async (req, res) => {
 			...req.body,
 			userId: req.session.user_id
 		});
-		res.status(200).json(postData);
+		if (!postData) {
+			res.status(400).json({ message: "Could not create post" });
+			return;
+		} else {
+			res.redirect('/');
+		}
 	} catch (err) {
 		res.status(400).json({ message: err });
 	}
