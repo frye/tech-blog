@@ -20,11 +20,6 @@ if (process.env.DATABASE_URL) {
 			host: process.env.DB_HOST,
 			dialect: 'mysql',
 			port: process.env.DB_PORT,
-			dialectOptions: {
-				ssl: {
-				  require: true,
-				},
-			 },
 			pool: {
 				max: 5,
 				min: 0,
