@@ -28,7 +28,7 @@ Post.init({
 },
 	{
 		sequelize,
-		modelName: 'post',
+		modelName: 'post'
 	}
 );
 
