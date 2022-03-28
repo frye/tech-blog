@@ -5,7 +5,8 @@ const withAuth = require('../../utils/auth');
 router.get('/', async (req, res) => {
 	try {
 		const posts = await Post.findAll();
-		res.render('homepage', { posts });
+    res.json(posts);
+		// res.render('homepage', { posts });
 	} catch (err) {
 		res.status(400).json({ message: err });
 	}
