@@ -16,7 +16,7 @@ router.post('/', withAuth, async (req, res) => {
 	try {
 		const postData = await Post.create({
 			...req.body,
-			userId: req.session.user_id
+			user_id: req.session.user_id
 		});
 		if (!postData) {
 			res.status(400).json({ message: "Could not create post" });
