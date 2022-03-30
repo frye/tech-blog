@@ -4,14 +4,14 @@
     <div class="m-3">
       <div class="col p-4 d-flex flex-column position-static border rounded shadow-sm">
         <h3 class="mb-0">{{post.title}}</h3>
-        <div class="mb-1 text-muted">By: You at {{format_date post.createdAt}} : {{format_date_time post.createdAt}}</div>
+        <div class="mb-1 text-muted">By: You at {{format_date post.createdAt}} : {{format_date_time post.createdAt}}UTC</div>
         <p class="card-text mb-auto">{{post_preview post.content}}</p>
         <a href="/dashboard/{{post.id}}">Edit post</a>
       </div>
     </div>
   </div>
   {{else}}
-  <div class="col-md-6 mb-3">
+  <div class="col-md-6 m-3">
     <div class="col p-4 d-flex flex-column position-static border rounded shadow-sm">
       <h3 class="mb-0">No posts yet</h3>
     </div>
