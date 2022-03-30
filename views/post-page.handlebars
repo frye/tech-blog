@@ -28,7 +28,7 @@
 <h4 class="m-4">Comments:</h4>
 {{#each comments as |comment|}}
 <div class="comment border m-4 p-2 shadow-sm">
-  <h6 class="text-muted">By: {{comment.comment_user}} at {{format_date createdAt}} : {{format_date_time createdAt}}</h6>
+  <h6 class="text-muted">By: {{comment.comment_user}} at {{format_date createdAt}} : {{format_date_time createdAt}}UTC</h6>
   <p>{{comment.content}}</p>
 </div>
 {{/each}}
