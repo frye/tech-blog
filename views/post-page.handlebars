@@ -1,4 +1,4 @@
-  <div class="col-md-6 mb-3">
+  <div class="m-4">
     <div class="col p-4 d-flex flex-column position-static border rounded shadow-sm">
       <h3 class="mb-0">{{title}}</h3>
       <div class="mb-1 text-muted">By: {{user.username}} at {{format_date createdAt}}</div>
@@ -7,7 +7,7 @@
   </div>
   {{#if is_logged_in}}
   <form method="POST" action="/api/comments">
-    <div>
+    <div class="m-4">
       <div class="form-group">
         <label for="post_id" hidden>Post id</label>
         <input type="text" id="post_id" name="post_id" value="{{id}}" readonly hidden></input>
@@ -25,10 +25,10 @@
   </form>
 </div>
 {{/if}}
-<h4>Comments:</h4>
+<h4 class="m-4">Comments:</h4>
 {{#each comments as |comment|}}
-<div class="comment border m-1 p-2 shadow-sm">
-  <h5>By: {{comment.comment_user}} at {{format_date createdAt}}</h5>
+<div class="comment border m-4 p-2 shadow-sm">
+  <h6 class="text-muted">By: {{comment.comment_user}} at {{format_date createdAt}} : {{format_date_time createdAt}}</h6>
   <p>{{comment.content}}</p>
 </div>
 {{/each}}

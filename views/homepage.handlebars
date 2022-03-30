@@ -1,11 +1,13 @@
 <div class="row mb-2">
   {{#each posts as |post|}}
   <div class="col-md-6 mb-3">
-    <div class="col p-4 d-flex flex-column position-static border rounded shadow-sm">
-      <h3 class="mb-0">{{post.title}}</h3>
-      <div class="mb-1 text-muted">By: {{user.username}} at {{format_date post.createdAt}}</div>
-      <p class="card-text mb-auto">{{post_preview post.content}}</p>
-      <a href="/posts/{{post.id}}">Continue reading</a>
+    <div class="m-3">
+      <div class="col p-4 d-flex flex-column position-static border rounded shadow-sm">
+        <h3 class="mb-0">{{post.title}}</h3>
+        <div class="mb-1 text-muted">By: {{user.username}} at {{format_date post.createdAt}} : {{format_date_time post.createdAt}}</div>
+        <p class="card-text mb-auto">{{post_preview post.content}}</p>
+        <a href="/posts/{{post.id}}">Continue reading</a>
+      </div>
     </div>
   </div>
   {{else}}
