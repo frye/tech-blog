@@ -61,6 +61,15 @@ router.get('/login', async (req, res) => {
   res.render('login');
 });
 
+router.get('/signup', async (req, res) => {
+  if (req.session.is_logged_in) {
+    res.redirect('/dashboard');
+    return;
+  }
+
+  res.render('signup');
+});
+
 router.get('/newpost', withAuth, async (req, res) => {
   res.render('newpost', {
     is_logged_in: req.session.is_logged_in,
