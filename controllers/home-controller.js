@@ -62,7 +62,9 @@ router.get('/login', async (req, res) => {
 });
 
 router.get('/newpost', withAuth, async (req, res) => {
-  res.render('newpost');
+  res.render('newpost', {
+    is_logged_in: req.session.is_logged_in,
+  });
 });
 
 module.exports = router;
